@@ -206,6 +206,36 @@ export default function AboutPage() {
         </div>
       </div>
 
+      {/* 6. Credits & Community */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="bg-white dark:bg-dark-card rounded-3xl p-6 sm:p-8 border border-sage/20 dark:border-dark-border space-y-3">
+          <div className="flex items-center gap-2">
+            <Heart size={20} className="text-terracotta fill-terracotta" />
+            <h2 className="font-serif text-xl font-bold text-forest dark:text-white">Project Credits</h2>
+          </div>
+          <p className="text-xs sm:text-sm text-ink/70 dark:text-dark-text/70 leading-relaxed">
+            Designed and engineered with care for students and academia. Built with open-source tools: React, Vite, Tailwind CSS, Framer Motion, and Lucide React. Dedicated to every college student who has ever arrived at an office during a lunch break or lost a syllabus PDF the night before an examination.
+          </p>
+          <div className="pt-2 text-xs font-mono text-forest dark:text-sage">
+            Created for Saint Oxford Institute of Technology (SOIT)
+          </div>
+        </div>
+
+        <div className="bg-white dark:bg-dark-card rounded-3xl p-6 sm:p-8 border border-sage/20 dark:border-dark-border space-y-3">
+          <div className="flex items-center gap-2">
+            <Terminal size={20} className="text-forest dark:text-sage" />
+            <h2 className="font-serif text-xl font-bold text-forest dark:text-white">Contact & Feedback</h2>
+          </div>
+          <p className="text-xs sm:text-sm text-ink/70 dark:text-dark-text/70 leading-relaxed">
+            Campusly is an open student initiative. Have a suggestion, noticed a broken timetable, or want to contribute new study material for your department?
+          </p>
+          <div className="pt-2 text-xs font-mono space-y-1 text-ink/80 dark:text-dark-text/80">
+            <p><strong>Student Support:</strong> support@campusly.soit.edu</p>
+            <p><strong>Open Source Repo:</strong> github.com/your-username/campusly</p>
+          </div>
+        </div>
+      </div>
+
       {/* Back to Home CTA */}
       <div className="text-center pt-4">
         <Link to="/" className="btn-primary text-sm py-3 px-6 inline-flex items-center gap-2">

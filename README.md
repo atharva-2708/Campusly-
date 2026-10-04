@@ -1,213 +1,248 @@
 # 🎓 CAMPUSLY — Your Campus. Everything Connected.
 
-> **Institutional Deployment:** Saint Oxford Institute of Technology (SOIT)  
-> **Design Philosophy:** *The Analog Campus — Digital, But Human*  
-> **Status:** Production-Ready Frontend Web Application
+> **Institutional Showcase:** Saint Oxford Institute of Technology (SOIT)  
+> **Creative Direction:** *The Analog Campus — Digital, But Human*  
+> **Status:** Production-Ready Web Application (TypeScript Strict, Vite 8, React 18, Tailwind CSS v4)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18-61DAFB.svg)](https://react.dev/)
+[![Tailwind CSS v4](https://img.shields.io/badge/TailwindCSS-v4.0-38B2AC.svg)](https://tailwindcss.com/)
+[![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg)](https://vitejs.dev/)
 
 ---
 
-## 🏛️ Executive Summary
+## 🏛️ 1. Project Overview
 
-**Campusly** is a student-centric unified campus web application built for the students, faculty, and administration of **Saint Oxford Institute of Technology (SOIT)**. It unifies distributed college portals, physical notice boards, syllabus PDFs, exam archives, campus navigation, and local amenities into one cohesive, editorial-grade digital experience.
+**Campusly** is a student-centric, unified collegiate web platform built for the students, faculty, and administration of **Saint Oxford Institute of Technology (SOIT)**. It unifies distributed college portals, syllabus PDFs, past examination archives, real-time circulars, campus navigation, and local amenities into one cohesive, editorial-grade digital experience.
 
-Instead of navigating fragmented legacy ERP systems, WhatsApp groups, and physical pin-boards, SOIT students have access to a single, beautifully designed command center that manages their academic journey, day-to-day schedule, exam preparations, and campus lifestyle.
-
----
-
-## 🎨 Design Philosophy: "The Analog Campus"
-
-Most institutional campus software suffers from sterile, corporate table grids or cluttered dashboards. Campusly introduces an **editorial, publication-grade visual language** reminiscent of classic university journals, physical corkboards, and archival reading rooms:
-
-* **Warm Ivory (`#F6F1E7`) & Paper Cream (`#EDE4D4`)**: Gentle on the eyes for late-night study sessions.
-* **Deep Forest Green (`#183D32`)**: Academic authority, primary navigation, and active states.
-* **Muted Terracotta (`#C66B4E`)**: Urgent notices, exam vault indicators, and warning alerts.
-* **Academic Mustard (`#D7AA48`)**: Deadlines, practical alerts, and secondary accents.
-* **Sage Green (`#A8B9A0`) & Muted Lavender (`#A9A0C2`)**: Tagging, sports, hostels, and relaxed campus zones.
-* **Typography Triad**:
-  - **Headings:** *DM Serif Display* — Classic editorial gravitas.
-  - **Body Text:** *DM Sans* — Modern, hyper-readable sans-serif.
-  - **Data Badges & Course Codes:** *DM Mono* — Precise technical metadata.
-* **Dark Mode Support**: Seamless toggle between warm paper and night reading modes (`.dark`).
+Instead of navigating fragmented legacy ERP systems, scattered Google Drives, WhatsApp groups, and physical pin-boards, SOIT students have access to a single, beautifully designed command center that manages their academic journey, day-to-day schedule, exam preparations, and campus lifestyle.
 
 ---
 
-## 🚀 Key Functional Modules
+## ❗ 2. Problem Statement
 
-### 1. 🏠 Command Center (`/`)
-* **Personalized Greeting**: Time-aware greeting responding to morning, afternoon, or evening study routines.
-* **Contextual Action Tiles**: Instant shortcuts for "Exam tomorrow?", "New to campus?", "Need a bite?", and "Urgent circulars".
-* **Current Subjects & Resources**: Instant glance into active semester subjects with direct links to textbooks and lecture notes.
-* **Urgent Notice Banner**: Dismissible bulletin for time-critical circulars.
-* **Today's Class Schedule**: Interactive daily lecture timeline with room allocations.
-* **Live Campus Pulse**: Real-time counter of open administrative offices and nearest assignment deadlines.
-
-### 2. 📚 Academic Library & Curriculum Browser (`/academics`)
-* **11 Engineering & Basic Science Departments**: Complete 4-year undergraduate curricula for EXTC, ELEC, COMP, IT, AIML, MECH, CIVIL, TEXT, MATH, PHY, and CHEM.
-* **Multi-Tier Navigation**: Select Department → Year (1st–4th) → Semester (I–VIII) → Subject.
-* **35+ Textbook Archive**: High-resolution digital book covers, author credentials, ISBNs, user ratings, and semester alignment.
-* **Interactive Resource Tabs**: Filter resources by Textbooks, Lecture Notes, Previous Year Papers, Lab Manuals, and Question Banks.
-* **Bookmark & Download Triggers**: Save directly to personal shelf or track offline downloads.
-
-### 3. 📝 Exam Vault — Solved Question Papers (`/question-papers`)
-* **30+ Multi-Year Archives (2022–2025)**: End-Semester, Mid-Semester, Unit Tests, and Supplementary papers.
-* **Multi-Dimensional Filters**: Filter simultaneously by Department, Exam Year, Exam Type, and Semester.
-* **Interactive Exam Paper Previewer Modal**: Full-featured examination paper modal with official university watermarks, course metadata, and Section A / Section B questions.
-
-### 4. 📋 Coursework & Practice Tracker (`/assignments`)
-* **Coursework Manager**: Track active lab submissions, unit question banks, practice problem sets, and class tests.
-* **Priority & Deadline Status**: Visual badges for *New*, *Important*, *Upcoming*, and *Archived* tasks.
-* **Modal Task Details**: Inspect problem statements, rubrics, and faculty upload metadata.
-
-### 5. 📢 Digital Noticeboard (`/announcements`)
-* **Live Circular Stream**: 20 authentic university circulars across Examination, Placement, Cultural Fests, Sports, and Administration.
-* **Urgent & Important Badges**: Animated visual pulses for urgent advisories.
-* **Filter by Domain**: Narrow notices down to Academic, Placement, Holiday, or Departmental circulars.
-
-### 6. 🗺️ Interactive SVG Campus Map (`/campus-map`)
-* **Vector Vector Blueprint**: Dynamic SVG campus layout covering 20 key academic blocks, workshops, libraries, hostels, food courts, and medical facilities.
-* **Pan & Zoom Controls**: Responsive canvas navigation with pinch, pan, zoom-in, zoom-out, and reset view.
-* **Building Detail Drawer**: Click any campus landmark to view floor details, office hours, nearby amenities, and descriptions.
-
-### 7. ☕ Around the Corner — Local Discovery (`/explore-nearby`)
-* **30+ Student Hangouts & Essential Services**: Curated directory across Food & Dining, Shopping, Entertainment, Transit, and Services.
-* **Student Distance & Budget Indicators**: Distance from main gate (in meters/km), price categories (`₹`, `₹₹`, `₹₹₹`), and operating hours.
-
-### 8. 🎒 Freshers' Survival Guide (`/freshers-guide`)
-* **12 Comprehensive Survival Articles**: Getting started, navigating registration, academic survival, lab etiquette, hostel hacks, and campus slang.
-* **First-Week Interactive Checklist**: 10 essential onboarding milestones with persistent `localStorage` progress tracking.
-
-### 9. 🕒 Live Office Hours & Timings (`/office-timings`)
-* **16 College Offices**: Detailed directory for Principal's Office, Exam Cell, Student Section, Placement Cell, Central Library, and Department HODs.
-* **Dynamic Real-Time Status**: Automatically evaluates local computer clock against operating hours and lunch intervals to display **OPEN NOW** or **CLOSED**.
-
-### 10. 📅 Academic Calendar (`/calendar`)
-* **Semester Milestones (Oct–Dec 2026)**: Comprehensive matrix tracking mid-terms, final exams, fee deadlines, fests, and government holidays.
-* **Interactive Month Matrix**: Click any day to view scheduled events, or filter by Exam, Deadline, Holiday, or Cultural events.
-
-### 11. 🎯 Student Study Planner (`/study-planner`)
-* **Task Manager**: Add, complete, and prioritize personal study tasks with course codes and target dates.
-* **Radial Progress Tracker**: Dynamic completion percentage tracking active vs. completed tasks with `localStorage` persistence.
-
-### 12. 🔖 Personal Shelf & Downloads (`/bookmarks`, `/downloads`)
-* **Personalized Bookmarks**: Tabbed collection of saved books, question papers, and assignments with one-click removal.
-* **Offline Download Log**: Track simulated offline study materials with one-click re-download.
-
-### 13. ⚙️ Profile & System Settings (`/profile`, `/settings`)
-* **Student Customization**: Edit student identity, enrollment numbers, active department, and semester.
-* **1-Click Demo Role Switcher**: Instant toggle between **Student Mode** (Atharv, EXTC Yr 2) and **Administrator Mode** (Dean of Academics) available in the sidebar and profile page.
-* **Data Management**: Reset demo state, clear search history, and configure notification preferences.
-
-### 14. 🛡️ Administrative Console (`/admin`)
-* **Institutional Metrics**: High-level telemetry on total resources, papers, circulars, and departmental coverage.
-* **CRUD Management**:
-  - Publish official announcements with category, priority, and date parameters.
-  - Add and manage academic textbooks and study guides.
-  - Review department structures and local student hubs.
-
-### 15. 📖 About & Architecture Reference (`/about`)
-* Comprehensive institutional documentation detailing project rationale, system architecture, engineering metrics, and future roadmap.
+In modern higher education institutions, student information is painfully fragmented:
+1. **Academic Fragmentation:** Syllabus sheets, textbook references, and lecture notes are passed unofficially through temporary WhatsApp groups or personal drives.
+2. **Archival Inaccessibility:** Previous year question papers (PYQs) and solution schemes are difficult to source, often requiring visits to photocopy shops.
+3. **Information Delay:** Crucial circulars regarding exam registrations, scholarships, and placement drives are easily missed on physical corkboards or buried in emails.
+4. **Geographic & Operational Uncertainty:** Incoming students struggle to locate lecture halls, while seniors frequently walk across sprawling campuses only to find administrative offices closed for unannounced lunch breaks.
+5. **Alienating User Experience:** Conventional college ERPs are designed for administrative record-keeping rather than student daily life.
 
 ---
 
-## 🛠️ Technology Stack
+## ✨ 3. Implemented Features
 
-| Layer | Technologies |
-| :--- | :--- |
-| **Core Framework** | React 18 with TypeScript |
-| **Build Tooling** | Vite 8 + Rolldown Engine |
-| **Styling & Design System** | Tailwind CSS v4 with Custom Color Variables |
-| **Animation Engine** | Framer Motion (Transitions, Drawers, Modals) |
-| **Iconography** | Lucide React |
-| **Routing** | React Router DOM v6 |
-| **Fonts** | `@fontsource/dm-serif-display`, `@fontsource/dm-sans`, `@fontsource/dm-mono` |
-| **State & Persistence** | React Context (`StudentContext`, `ThemeContext`) + `localStorage` |
+| Module | Route | Highlights |
+| :--- | :--- | :--- |
+| **Command Center** | `/` | Time-aware greeting, urgent circular ticker, today's lecture schedule, real-time open office counter, and quick-action cards. |
+| **Academic Reading Room** | `/academics` | 11 engineering & basic science departments with full 4-year curricula and a 35-volume textbook library with cover artwork and ISBNs. |
+| **Exam Vault** | `/question-papers` | 30+ multi-year question papers (2022–2025) across End-Sem, Mid-Sem, and Unit Tests with an interactive solved paper modal. |
+| **Coursework & Practice** | `/assignments` | Coursework problem sets, lab manuals, and unit question banks with deadline countdowns and priority badges. |
+| **Campus Noticeboard** | `/announcements` | 20 campus circulars with urgent animated pulses, pinned items, and category filters (Exam, Placement, Academic, Holiday). |
+| **Interactive Campus Map** | `/campus-map` | Custom SVG vector layout of SOIT campus with drag-to-pan, zoom controls, and a building inspection drawer. |
+| **Live Office Timings** | `/office-timings` | Dynamic client-side open/closed engine evaluating 16 college offices in real-time, accounting for lunch breaks. |
+| **Around the Corner** | `/explore-nearby` | Curated directory of 30 student-friendly eateries, printing shops, transit stops, and pharmacies with walking distances. |
+| **Freshers' Survival Guide** | `/freshers-guide` | 12 survival articles and an interactive 10-item onboarding checklist with `localStorage` persistence. |
+| **Academic Calendar** | `/calendar` | Monthly milestone matrix tracking mid-terms, final exams, fee deadlines, fests, and holidays. |
+| **Study Planner** | `/study-planner` | Personal task manager with priority filtering and radial progress visualization. |
+| **Personal Shelf** | `/bookmarks` & `/downloads` | Saved textbooks, question papers, assignments, and simulated offline study downloads. |
+| **Administrator Console** | `/admin` | CRUD interface for publishing notices, managing books, and reviewing institutional telemetry. |
+| **Role Switcher** | Anywhere | 1-Click instant toggle between **Student Mode** (Atharv, EXTC Yr 2) and **Administrator Mode**. |
 
 ---
 
-## 📂 Project Directory Structure
+## 📸 4. Screenshots
+
+*(See [ASSET_CHECKLIST.md](ASSET_CHECKLIST.md) for full asset specifications and capture instructions).*
 
 ```text
-campusly/
-├── public/                     # Static assets & favicon
-├── src/
-│   ├── components/
-│   │   ├── illustrations/      # Custom SVG illustrations (Campus, Books, Empty states)
-│   │   ├── layout/             # TopNav, Sidebar, MobileNav, AppLayout, MobileDrawer
-│   │   └── ui/                 # Reusable UI widgets (SearchBar, Badges, Modals, Skeletons)
-│   ├── contexts/               # StudentContext (state/bookmarks/tasks) & ThemeContext
-│   ├── data/                   # Realistic, typed domain datasets
-│   │   ├── announcements.ts    # 20 campus notices & circulars
-│   │   ├── assignments.ts      # 25 coursework & lab question banks
-│   │   ├── books.ts            # 35 academic textbooks with ISBNs
-│   │   ├── calendar.ts         # Semester milestones & exam dates
-│   │   ├── campusLocations.ts  # 20 SVG campus map coordinate sets
-│   │   ├── departments.ts      # 11 engineering & basic science departments
-│   │   ├── freshersGuide.ts    # Survival guide articles & 10 onboarding tasks
-│   │   ├── nearbyPlaces.ts     # 30 food, transit, & service locations
-│   │   ├── notifications.ts    # 15 real-time student notification alerts
-│   │   ├── officeTimings.ts    # 16 administrative offices & schedules
-│   │   ├── questionPapers.ts   # 30 solved previous year question papers
-│   │   └── studentProfile.ts   # Default student & administrator personas
-│   ├── hooks/                  # Custom hooks (useSearch, useLocalStorage)
-│   ├── pages/                  # 18 fully interactive view controllers
-│   ├── types/                  # Rigorous TypeScript interfaces & contracts
-│   ├── utils/                  # Helper utilities (time parsing, office status, date formatting)
-│   ├── App.tsx                 # Route registry & layout wrapping
-│   ├── index.css               # Editorial CSS design tokens & Tailwind rules
-│   └── main.tsx                # React root mount
-├── package.json                # Project dependencies & scripts
-└── tsconfig.json               # TypeScript compiler configuration
++-----------------------------------------------------------------------------------+
+|                        CAMPUSLY DASHBOARD & COMMAND CENTER                         |
++-----------------------------------------------------------------------------------+
+|  [01_dashboard_command_center.png]                                                |
+|  * Personalized greeting, urgent banner, schedule strip, and quick access tiles   |
++-----------------------------------------------------------------------------------+
+|               ACADEMIC READING ROOM              |          EXAM VAULT MODAL      |
++--------------------------------------------------+--------------------------------+
+|  [02_academic_reading_room.png]                  |  [03_exam_vault_modal.png]      |
+|  * 11 Departments, 4-Year Curricula & 35 Books    |  * Solved Question Paper Modal |
++--------------------------------------------------+--------------------------------+
+|              INTERACTIVE SVG CAMPUS MAP          |       LIVE OFFICE TIMINGS      |
++--------------------------------------------------+--------------------------------+
+|  [04_campus_vector_map.png]                      |  [05_live_office_timings.png]  |
+|  * Vector Map with Zoom & Inspection Drawer       |  * Real-Time Open/Closed Logic |
++-----------------------------------------------------------------------------------+
 ```
 
 ---
 
-## 💻 Local Setup & Development
+## 🎨 5. Design System: "The Analog Campus"
+
+Unlike generic corporate dashboards, Campusly introduces an **editorial visual language** inspired by classic university journals, physical corkboards, and archival reading rooms:
+- **Warm Ivory (`#F6F1E7`) & Paper Cream (`#EDE4D4`):** Soft, paper-like background surfaces.
+- **Deep Forest Green (`#183D32`):** Primary branding, active navigation, and section headers.
+- **Muted Terracotta (`#C66B4E`):** Urgent circulars, exam tags, and warning alerts.
+- **Academic Mustard (`#D7AA48`):** Deadlines, practical alerts, and secondary accents.
+- **Sage Green (`#A8B9A0`) & Lavender (`#A9A0C2`):** Sports, hostels, and campus life tagging.
+- **Typography Triad:**
+  - *Headings:* `DM Serif Display` — Editorial academic gravitas.
+  - *Body Text:* `DM Sans` — Clean, modern readability.
+  - *Metadata:* `DM Mono` — Course codes, timestamps, and technical tags.
+
+---
+
+## 🛠️ 6. Technology Stack
+
+- **Core Framework:** React 18 with TypeScript 5.8
+- **Build Engine:** Vite 8 + Rolldown/Rollup optimizer
+- **Styling:** Tailwind CSS v4 with custom CSS variable design tokens
+- **Animations:** Framer Motion (page transitions, modals, drawers)
+- **Icons:** Lucide React
+- **Typography:** Google Fonts via `@fontsource`
+- **Routing:** React Router v6 / v7
+- **State Management:** React Context (`StudentContext`, `ThemeContext`)
+- **Persistence:** HTML5 `localStorage`
+
+---
+
+## 📐 7. Architecture Overview
+
+```mermaid
+graph TD
+    User["Student / Faculty / Admin"] --> AppLayout["AppLayout.tsx (TopNav + Sidebar + MobileDrawer)"]
+    AppLayout --> GlobalSearch["Global Search (Ctrl+K / SearchBar.tsx)"]
+    AppLayout --> Router["React Router View Controllers"]
+    
+    Router --> Academics["AcademicsPage (11 Departments, 35 Books)"]
+    Router --> ExamVault["QuestionPapersPage (Exam Vault & Solved Preview)"]
+    Router --> Noticeboard["AnnouncementsPage (Urgent Circulars)"]
+    Router --> CampusMap["CampusMapPage (SVG Canvas + Zoom)"]
+    Router --> OfficeHours["OfficeTimingsPage (isOfficeOpen Engine)"]
+    Router --> Planner["StudyPlannerPage & BookmarksPage"]
+    Router --> AdminPortal["AdminPage (CRUD Manager & Metrics)"]
+    
+    Router --> ContextEngine["StudentContext & ThemeContext"]
+    ContextEngine --> Storage[("Browser localStorage")]
+```
+
+---
+
+## 💻 8. Installation & Setup
 
 ### Prerequisites
-* **Node.js**: v18.0.0 or higher
-* **npm** or **pnpm** or **yarn**
+- **Node.js:** v18.0.0 or higher
+- **npm** (comes with Node.js)
 
-### Installation
-1. Clone or navigate to the project directory:
+### Installation Steps
+1. Clone the repository:
    ```bash
+   git clone https://github.com/your-username/campusly.git
    cd campusly
    ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the local development server:
-   ```bash
-   npm run dev
-   ```
-4. Open your browser and navigate to `http://localhost:5173`.
 
-### Production Build
-To create an optimized, minified production build:
+---
+
+## 🚀 9. Running Locally
+
+Start the local development server:
+```bash
+npm run dev
+```
+Open **`http://localhost:5173`** in your browser to view the application live.
+
+To stop the server, press `Ctrl + C` in your terminal.
+
+---
+
+## ⚙️ 10. Environment Variables
+
+Campusly runs 100% standalone out-of-the-box without requiring any mandatory environment variables. For custom institutional deployments, copy `.env.example` to `.env`:
+```bash
+cp .env.example .env
+```
+
+| Variable | Default Value | Description |
+| :--- | :--- | :--- |
+| `VITE_APP_NAME` | `"Campusly"` | Platform display name |
+| `VITE_APP_TAGLINE` | `"Your Campus. Everything Connected."` | Header slogan |
+| `VITE_INSTITUTION_NAME` | `"Saint Oxford Institute of Technology (SOIT)"` | Collegiate entity |
+| `VITE_ENABLE_TELEMETRY` | `false` | Optional analytics toggle |
+
+---
+
+## 📦 11. Production Build
+
+To compile and bundle for production:
 ```bash
 npm run build
 ```
-To preview the production build locally:
+* **Output Folder:** `dist/`
+* **Test Bundle Locally:**
+  ```bash
+  npm run preview
+  ```
+
+---
+
+## 🌐 12. Deployment Instructions
+
+### Deploying to Render (Recommended)
+1. Push your repository to GitHub.
+2. Log into [Render.com](https://render.com) and click **New + → Static Site**.
+3. Select your `campusly` repository.
+4. Configure:
+   - **Build Command:** `npm run build`
+   - **Publish Directory:** `dist`
+5. Click **Create Static Site**. Your site will be deployed at `https://campusly.onrender.com`.
+
+### Deploying to Vercel
 ```bash
-npm run preview
+npx vercel
+```
+* Follow the CLI prompts with default settings (`Vite` framework preset).
+
+### Deploying to Netlify
+```bash
+npx netlify deploy --prod --dir=dist
 ```
 
 ---
 
-## 🧑‍💻 Evaluation & Demo Guide for Hackathon Judges
+## 🔑 13. Demo Credentials & Evaluation
 
-* **Instant Admin Access**: Click the **Switch to Admin** button at the bottom of the sidebar or navigate to **Settings → Admin Dashboard** to inspect administrator analytics and circular publishing tools.
-* **Instant Student Mode**: Click **Switch to Student** to return to Atharv's EXTC view.
-* **Global Search (`Ctrl + K`)**: Press `Ctrl+K` or click the search bar at the top to search across all textbooks, PYQs, circulars, map locations, and offices with real-time categorised dropdown results.
-* **Interactive Map**: Head to **Campus Map**, click on any building (e.g. *Central Library*, *Main Building*, *Canteen*), and test zoom controls or click buildings to open the inspection drawer.
-* **Solved Paper Preview**: Visit **Question Papers**, pick any paper (e.g. *Analog Electronics II*), and click **Preview** to view the simulated university question sheet.
-* **Live Office Status**: Visit **Office Timings** to observe real-time open/closed calculations based on your current time of day.
-* **Theme Switching**: Click the Sun/Moon icon in the top navigation bar to toggle between the Warm Paper and Dark editorial palettes.
+* **No Login Required:** To ensure frictionless testing, Campusly loads with a default verified student profile (**Atharv**, Electronics Engineering, Year 2, Sem III).
+* **Administrator Mode:** Click the **Switch to Admin** button at the bottom of the sidebar or navigate to **Settings → Admin Dashboard** to evaluate administrative CRUD tools and circular publishing.
 
 ---
 
-## 📜 License & Disclaimers
+## ⚠️ 14. Demo Limitations
 
-* **Institution Notice**: Saint Oxford Institute of Technology (SOIT) is a representative collegiate institution created for prototyping and academic platform demonstration.
-* **Data Privacy**: All student tasks, notes, bookmarks, and preferences are persisted locally in client-side storage (`localStorage`). No private data leaves the user's browser.
-* **License**: MIT License. Open source and built for college students everywhere.
+* **Simulated Academic Data:** Data records (35 textbooks, 30 question papers, 20 announcements) are pre-populated with realistic engineering curricula for demonstration.
+* **Client-Side Persistence:** Bookmarks, study tasks, and checklist progress are stored in your browser's `localStorage` and will clear if browser cache is reset.
+* **External ERPs:** External university biometric attendance systems and paid payment gateways are simulated client-side.
+
+---
+
+## 🔮 15. Future Scope
+
+1. **SIS / ERP Biometric Sync:** Direct database connectors to college biometric turnstiles for live attendance metrics.
+2. **Certified Student Uploads:** Peer-reviewed upload flow for student lecture notes and project reports.
+3. **Progressive Web App (PWA):** Service worker offline caching for 100% offline timetable and syllabus viewing.
+4. **Multi-Tenant Campus Federation:** Allowing any university to launch a white-label Campusly instance.
+
+---
+
+## 🤝 16. Contributing
+
+We welcome community contributions! Please review our [CONTRIBUTING.md](CONTRIBUTING.md) for branch naming conventions, TypeScript standards, and pull request guidelines.
+
+---
+
+## 📜 17. License
+
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for full details.
